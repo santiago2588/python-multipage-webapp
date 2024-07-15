@@ -33,7 +33,7 @@ pg = st.navigation(
 
 
 # --- SHARED ON ALL PAGES ---
-st.logo("assets/logo.png")
+st.logo("assets/logo_blanco.png")
 st.sidebar.markdown("Made with ❤️ by [Pungo](https://www.pungoapp.com/)")
 
 

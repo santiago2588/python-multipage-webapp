@@ -4,7 +4,7 @@ import streamlit as st
 import requests  # pip install requests
 
 
-WEBHOOK_URL = st.secrets["WEBHOOK_URL"]
+#WEBHOOK_URL = st.secrets["WEBHOOK_URL"]
 
 
 def is_valid_email(email):
@@ -15,15 +15,15 @@ def is_valid_email(email):
 
 def contact_form():
     with st.form("contact_form"):
-        name = st.text_input("First Name")
-        email = st.text_input("Email Address")
-        message = st.text_area("Your Message")
-        submit_button = st.form_submit_button("Submit")
+        name = st.text_input("Nombre")
+        email = st.text_input("Correo")
+        message = st.text_area("Mensaje")
+        submit_button = st.form_submit_button("Enviar")
 
     if submit_button:
-        if not WEBHOOK_URL:
-            st.error("Email service is not set up. Please try again later.", icon="📧")
-            st.stop()
+        #if not WEBHOOK_URL:
+            #st.error("Email service is not set up. Please try again later.", icon="📧")
+            #st.stop()
 
         if not name:
             st.error("Please provide your name.", icon="🧑")
@@ -42,10 +42,10 @@ def contact_form():
             st.stop()
 
         # Prepare the data payload and send it to the specified webhook URL
-        data = {"email": email, "name": name, "message": message}
-        response = requests.post(WEBHOOK_URL, json=data)
+        #data = {"email": email, "name": name, "message": message}
+        #response = requests.post(WEBHOOK_URL, json=data)
 
-        if response.status_code == 200:
-            st.success("Your message has been sent successfully! 🎉", icon="🚀")
-        else:
-            st.error("There was an error sending your message.", icon="😨")
+        #if response.status_code == 200:
+            #st.success("Tu mensaje ha sido enviado! 🎉", icon="🚀")
+        #else:
+            #st.error("Hubo un problema al enviar tu mensaje.", icon="😨")

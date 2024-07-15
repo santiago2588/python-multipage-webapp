@@ -3,7 +3,7 @@ import streamlit as st
 from forms.contact import contact_form
 
 
-@st.experimental_dialog("Contact Us")
+@st.experimental_dialog("Contacto")
 def show_contact_form():
     contact_form()
 
@@ -11,37 +11,35 @@ def show_contact_form():
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.image("./assets/profile_image.png", width=230)
+    st.image("./assets/logo_original.png", width=230)
 
 with col2:
-    st.title("Sven Bosau", anchor=False)
+    st.title("Soluciones digitales", anchor=False)
     st.write(
-        "Senior Data Analyst, assisting enterprises by supporting data-driven decision-making."
+        "Ciencia de datos aplicada a la Industria."
     )
-    if st.button("✉️ Contact Me"):
+    if st.button("✉️ Contactanos"):
         show_contact_form()
 
 
-# --- EXPERIENCE & QUALIFICATIONS ---
+# --- SERVICES ---
 st.write("\n")
-st.subheader("Experience & Qualifications", anchor=False)
+st.subheader("Servicios", anchor=False)
 st.write(
     """
-    - 7 Years experience extracting actionable insights from data
-    - Strong hands-on experience and knowledge in Python and Excel
-    - Good understanding of statistical principles and their respective applications
-    - Excellent team-player and displaying a strong sense of initiative on tasks
+    - Desarrollo de modelos de Inteligencia Artificial
+    - Estudios de eficiencia energetica en procesos industriales
+    - Analisis de Ciclo de Vida de productos y procesos industriales
+    - Desarrollo de plataformas digitales para la industria 4.0
     """
 )
 
-# --- SKILLS ---
+# --- PRODUCTS ---
 st.write("\n")
-st.subheader("Hard Skills", anchor=False)
+st.subheader("Productos", anchor=False)
 st.write(
     """
-    - Programming: Python (Scikit-learn, Pandas), SQL, VBA
-    - Data Visualization: PowerBi, MS Excel, Plotly
-    - Modeling: Logistic regression, linear regression, decision trees
-    - Databases: Postgres, MongoDB, MySQL
+    - AutoAI-Regresion
+    - AutoAI-Clasificacion
     """
 )

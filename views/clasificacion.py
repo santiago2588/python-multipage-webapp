@@ -25,7 +25,7 @@ def response_generator():
         time.sleep(0.05)
 
 
-st.title("Chatbot")
+st.title("Modelo de Clasificacion")
 
 # Initialize chat history
 if "messages" not in st.session_state:
